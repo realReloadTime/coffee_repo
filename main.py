@@ -23,7 +23,7 @@ class Espresso(QMainWindow):
                                                            (elem,)).fetchall()[0][0]
                 if j == 6:
                     elem = str(self.data_base.cursor().execute('''SELECT volume_size FROM volume WHERE id=(?)''',
-                                                           (elem,)).fetchall()[0][0]) + 'л'
+                                                               (elem,)).fetchall()[0][0]) + 'л'
                 self.tableWidget.setItem(i, j, QTableWidgetItem(str(elem)))
 
 
